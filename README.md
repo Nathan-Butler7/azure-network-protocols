@@ -44,5 +44,5 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
  Virtual Machines:
 - In the Azure Portal, use the search bar at the top os search for 'Virtual Machines" and select it.
 - You are desired to create two virual machines.
-- In the display area, click 'Create' then click 'Azure virtual machine'
+- In the display area, click 'Create' > 'Azure virtual machine'
 ![Screenshot 2025-05-02 225357](https://github.com/user-attachments/assets/6af18902-841e-4409-8c26-51c1576faed9)
