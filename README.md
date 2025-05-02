@@ -22,3 +22,5 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 <h2>High-Level Steps </h2>
 
 - Creating Resource Groups and Virtual Machines in Azure
+
+<h2>Actions and Observations</h2>
