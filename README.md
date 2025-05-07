@@ -30,32 +30,40 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
  Resource Group:
 - To create a Resource Group, go to the Azure Portal. In the middle of the homepage under 'Azure Services', click on 'Resource groups' and then select 'Create' to begin the process'.
+
 ![Screenshot 2025-05-02 161517](https://github.com/user-attachments/assets/b71ae5ea-cbf2-43b0-8f7d-69a8376dbcff)
 
 - All rescources in a subsciption are billed together so leave that as default.
 - Resource group name can be named to your desire. I will call mine "RG-NSGs-Lab".
 - When selecting a resource group region, it's recommended that you select a location close to where your control operations originate.
+
 ![Screenshot 2025-05-02 2211482](https://github.com/user-attachments/assets/57310bb4-d7c1-4de3-aa04-9f5bded6e110)
 
 - Click 'Review + create'.
+
 ![Screenshot 2025-05-02 223356](https://github.com/user-attachments/assets/cbeb6f49-381c-4e54-b569-a56d61447b0c)
+
 - Then click 'Create'.
+
 ![Screenshot 2025-05-02 223508](https://github.com/user-attachments/assets/c13dbdac-728f-496f-ae81-3db33248b357)
 
  Virtual Machines:
 - In the Azure Portal, use the search bar at the top os search for 'Virtual Machines" and select it.
 - You are desired to create two virual machines.
 - In the display area, click 'Create' > 'Azure virtual machine'.
+
 ![Screenshot 2025-05-02 225357](https://github.com/user-attachments/assets/6af18902-841e-4409-8c26-51c1576faed9)
 
 - Under 'Project details', assign your new resource group you just created (RG-NSGs-Lab).
 - Give your Virtual Machine name "windows-vm".
 - Select the resource region the same as the Resource groups ((Asia Pacific) Australia East).
+
 ![Screenshot 2025-05-03 002830](https://github.com/user-attachments/assets/7a998ae6-1294-44f3-8505-ec2ea37b34e0)
 
 - For Image, select 'Windows 10 Pro version 22H2 - x64 Gen2'.
 - Recommended for 'Size' you utilise "Standard_D2s_v5 - 2 vcpus, 8 GiB memory".
 - For 'Administrator Account' create your Username "labuser" and password can be anything. e.g; "Cyberlab123!".
+
 ![Screenshot 2025-05-03 004155](https://github.com/user-attachments/assets/fec762f8-fe8c-4778-bbaa-0e5362ef3f47)
 
 - Be sure to tick the box for eligibily of a windows liscence.
@@ -65,50 +73,64 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 - Change the 'Virtual Network' name. Click on 'Create new'.
 - Change it to "Lab2-Vnet" the click 'ok'.
+
 ![image](https://github.com/user-attachments/assets/63a21391-5646-4f3d-bccd-48ca4bdc3b8d)
 
 - Click 'Review + Create'.
+
 ![image](https://github.com/user-attachments/assets/7a82ac39-8f99-4fe9-bc17-03c854742699)
 
 - Wait for the VM to process till you see "Validation passed" on the top of the page.
+
 ![Screenshot 2025-05-06 141709](https://github.com/user-attachments/assets/0bd90452-ceca-46f3-b2e3-6e792e9a564c)
 
 - Then click 'Create'.
+
 ![Screenshot 2025-05-06 141743](https://github.com/user-attachments/assets/86ed7e8f-ccb0-423f-b337-969517eaebf1)
 
 - You have successfully created a Windows Virtual Machine.
 - Click on 'Create another VM' for Linux (Ubuntu) VM.
+
 ![image](https://github.com/user-attachments/assets/c3b0a520-5df7-4c29-a246-0c5643b25da4)
 
 - Under 'Project details', assign your new resource group you just created (RG-NSGs-Lab).
 - Give your Virtual Machine name "linux-vm".
+
 ![image](https://github.com/user-attachments/assets/6666c8b8-0b5a-450a-a01b-3a0751da96ef)
 
 - For Image, select 'Ubuntu Server 22.04 LTS - x64 Gen2'.
 - Recommended for 'Size' you utilise "Standard_D2s_v5 - 2 vcpus, 8 GiB memory".
+
 ![image](https://github.com/user-attachments/assets/7e9e4fb0-7bc3-44b7-9387-82df0beb6e48)
 
 - Under Administrator account for 'Authentication type' click 'Password'.
 - Create your Username "labuser" and password can be anything. e.g; "Cyberlab123!".
+
 ![image](https://github.com/user-attachments/assets/26f80cdc-5501-45fb-906f-64594df1ec01)
 
 - Click 'Next : Disks' > 'Next : Networking'.
+
 ![image](https://github.com/user-attachments/assets/ef7296c4-e998-4e9a-861c-c9da3e8d8a1d)
 
 - Make sure the 'Virtual Network' is "Lab2-Vnet"
+
 ![image](https://github.com/user-attachments/assets/9bc6bcbc-21aa-4b95-89a5-3ce66ca6febc)
 
 - Click 'Review + Create'.
+
 ![Screenshot 2025-05-03 010234](https://github.com/user-attachments/assets/afac077b-29c2-4129-9728-df473bd7ab1e)
 
 - Wait for the VM to process till you see "Validation passed" on the top of the page.
+
 ![Screenshot 2025-05-06 141709](https://github.com/user-attachments/assets/d2a07be8-792c-4d0e-8065-400808893c07)
 
 - Then click 'Create'.
+
 ![Screenshot 2025-05-06 141743](https://github.com/user-attachments/assets/f4d082cc-d5a0-4180-8efe-746d9dc2177f)
 
 - You have successfully created a Linux Virtual Machine.
 - Search up "Virtual Machines" and click on it, you will see both Virtual Machines.
+
 ![image](https://github.com/user-attachments/assets/8b17d796-e31e-4570-8886-6c40d2216545)
 
 2. Observing ICMP Traffic
@@ -119,12 +141,14 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 - Click 'Show Options' and put in the user name for the windows VM (labuser).
 - Click 'connect'
 
+
 ![image](https://github.com/user-attachments/assets/b876d3dd-1522-4957-ba07-854e5074a469)
 
 - Insert the password then click 'ok'.
 - Click 'Yes' to continue.
 
 - Within your Windows 10 VM, go to Microsoft Edge and install Wireshark. Make sure to tick "Install Ncap version" during the installation process.
+
 ![Screenshot 2025-05-07 175629](https://github.com/user-attachments/assets/b81bf418-c396-42f8-8681-1dc45e335c40)
 
 - Download the "Windows x64 Installer" then 'open file'.
@@ -133,25 +157,76 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 - Click 'Next' > 'Noted' > 'Next'(until you see Packet Capture, make sure to tick "Install Ncap version" during the installation process) > 'Install'.
 - On the License Agreement click 'I agree' > Install > Next > Finish.
+
 ![image](https://github.com/user-attachments/assets/5af0f00e-5013-4409-b943-652a1d290545)
 
 - Installation should be complete so click 'Next' and 'Finish'.
+
 ![image](https://github.com/user-attachments/assets/70424e65-daab-4d7f-8ca1-2ab0e69af2ac)
 
 - On your Windows VM, click the Windows 'start' icon to open up the menu and search up "Wireshark" and open it.
 - Click on 'Ethernet' and start a packet capture by clicking the small blue fin.
+
 ![image](https://github.com/user-attachments/assets/6b6babe7-8512-4181-a263-e08c0854de00)
 
 - Apply filter for ICMP traffic only.
+
 ![image](https://github.com/user-attachments/assets/a40d53c5-1800-4cc2-9f37-792cef7b3fee)
 
 - Retrieve/Copy the private IP address of the Linux VM on Azure (10.0.0.5).
+
 ![image](https://github.com/user-attachments/assets/5c78e569-78e7-4ae1-9ca6-715edfd984b1)
 
-- Open up Poweshell on the Windows VM
+- Open up Poweshell on the Windows VM.
+
 ![image](https://github.com/user-attachments/assets/bfbb7b76-6c98-4db8-ac50-bc254a27bf65)
 
-- 
-- 
+- Insert ping 10.0.0.5.
+
 ![image](https://github.com/user-attachments/assets/b9389d97-5d5c-4402-a16c-70ad3c0e4029)
+
+- In Powershell you can see there are four "replies" but in Wireshark window you see eight events because it captured both the request and reply from both sources (Windows and Linux). Furthermore, we know that we have successfully reached the destination over ICMP.
+
+![image](https://github.com/user-attachments/assets/3a62665d-3921-4ea0-81a4-359a11581382)
+
+3. Configuring a Firewall (Network Security Group)
+
+- On Powershell type "ping 10.0.0.5 -t"
+- A you will observe on Powershell it will have non-stop ping.
+
+![image](https://github.com/user-attachments/assets/dc9724de-b5e0-44f6-a484-84c72a3df401)
+
+- On your pc go to Azure Virtual Machines. Click on the Linux VM.
+- Open the Networking column and go to network setting.
+
+![image](https://github.com/user-attachments/assets/ddb88c3b-3503-40f1-b0f9-f1314b2f00ee)
+
+- Under essentials, where it says 'Network security group', click on 'linux-vm-nsg'
+
+![image](https://github.com/user-attachments/assets/b6a090b6-fd93-4819-86cc-1d47689f7c86)
+
+- Open the Networking coulumn and click on 'Inbound security rules'.
+- Click 'Add'.
+- For 'Destination port ranges' put 'asterisk'.
+- For 'Protocol put 'ICMPv4'.
+- For 'Action' just click deny.
+- Set for 'Priority' to 290.
+- Click 'Add'.
+
+![image](https://github.com/user-attachments/assets/0f2bb2f3-110c-4f54-907a-f3af8b9f1af0)
+
+- Back on Windows VM, when inspecting Powershell you will see it will have a "request timed out" and further inspection on Wireshark you will only see "request"
+
+![image](https://github.com/user-attachments/assets/45c38493-0a02-4c11-8a93-1406cccb8376)
+
+![image](https://github.com/user-attachments/assets/ecb0061c-2af2-414f-8d23-77e56f78f1f6)
+
+- Follow previous steps to delete the new rule we just created on the Linux VM.
+
+![image](https://github.com/user-attachments/assets/cd4462f2-51d9-45fe-8757-06835b4f49dc)
+
+- Back on Windows VM, observe ICMP traffic in Wireshark and Powershell.
+- Stop the ping activity my pressing CTRL C.
+
+![image](https://github.com/user-attachments/assets/f1a955a6-a9fe-46d7-b76d-f2838ceac3e2)
 
