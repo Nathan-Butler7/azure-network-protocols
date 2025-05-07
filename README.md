@@ -22,6 +22,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 <h2>High-Level Steps </h2>
 
 - Creating Resource Groups and Virtual Machines in Azure
+- Observe ICMP Traffic
 
 <h2>Actions and Observations</h2>
 
@@ -109,3 +110,48 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 - You have successfully created a Linux Virtual Machine.
 - Search up "Virtual Machines" and click on it, you will see both Virtual Machines.
 ![image](https://github.com/user-attachments/assets/8b17d796-e31e-4570-8886-6c40d2216545)
+
+2. Observing ICMP Traffic
+
+- On your PC, click the Windows 'start' icon to open up the menu and search up "Remote Desktop Connection".
+- If using Mac, install Microsoft Remote Desktop.
+- Copy windows VM Public IP address and paste it into the Remote Desktop Connection.
+- Click 'Show Options' and put in the user name for the windows VM (labuser).
+- Click 'connect'
+
+![image](https://github.com/user-attachments/assets/b876d3dd-1522-4957-ba07-854e5074a469)
+
+- Insert the password then click 'ok'.
+- Click 'Yes' to continue.
+
+- Within your Windows 10 VM, go to Microsoft Edge and install Wireshark. Make sure to tick "Install Ncap version" during the installation process.
+![Screenshot 2025-05-07 175629](https://github.com/user-attachments/assets/b81bf418-c396-42f8-8681-1dc45e335c40)
+
+- Download the "Windows x64 Installer" then 'open file'.
+
+![image](https://github.com/user-attachments/assets/45831a04-a397-4eae-b6e3-4b412b67827a)
+
+- Click 'Next' > 'Noted' > 'Next'(until you see Packet Capture, make sure to tick "Install Ncap version" during the installation process) > 'Install'.
+- On the License Agreement click 'I agree' > Install > Next > Finish.
+![image](https://github.com/user-attachments/assets/5af0f00e-5013-4409-b943-652a1d290545)
+
+- Installation should be complete so click 'Next' and 'Finish'.
+![image](https://github.com/user-attachments/assets/70424e65-daab-4d7f-8ca1-2ab0e69af2ac)
+
+- On your Windows VM, click the Windows 'start' icon to open up the menu and search up "Wireshark" and open it.
+- Click on 'Ethernet' and start a packet capture by clicking the small blue fin.
+![image](https://github.com/user-attachments/assets/6b6babe7-8512-4181-a263-e08c0854de00)
+
+- Apply filter for ICMP traffic only.
+![image](https://github.com/user-attachments/assets/a40d53c5-1800-4cc2-9f37-792cef7b3fee)
+
+- Retrieve/Copy the private IP address of the Linux VM on Azure (10.0.0.5).
+![image](https://github.com/user-attachments/assets/5c78e569-78e7-4ae1-9ca6-715edfd984b1)
+
+- Open up Poweshell on the Windows VM
+![image](https://github.com/user-attachments/assets/bfbb7b76-6c98-4db8-ac50-bc254a27bf65)
+
+- 
+- 
+![image](https://github.com/user-attachments/assets/b9389d97-5d5c-4402-a16c-70ad3c0e4029)
+
