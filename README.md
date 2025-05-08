@@ -23,6 +23,12 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 - Creating Resource Groups and Virtual Machines in Azure
 - Observe ICMP Traffic
+- Configuring a Firewall (Network Security Group)
+- Observe SSH Traffic
+- Observe DHCP Traffic
+- Observe DNS Traffic
+- Observe RDP Traffic
+
 
 <h2>Actions and Observations</h2>
 
@@ -229,4 +235,15 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 - Stop the ping activity my pressing CTRL C.
 
 ![image](https://github.com/user-attachments/assets/f1a955a6-a9fe-46d7-b76d-f2838ceac3e2)
+
+4. Observe SSH Traffic
+
+
+5. Observe DHCP Traffic
+
+
+6. Observe DNS Traffic
+
+
+7. Observe RDP Traffic
 
