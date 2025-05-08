@@ -235,10 +235,42 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 - Open the Linux VM in Azure and delete the block ICMP rule that we created. Click the trash can icon that is next to it to delete it.
 - Switch back to the Windows 10 virtual machine and send a ping to the Linux VM. In Wireshark, you should see ICMP request and reply packets showing that the two VMs are communicating. In PowerShell, you’ll also see successful ping responses from the Linux VM. This confirms that ICMP communication between the VMs is working again.
 - Stop the ping activity my pressing CTRL C.
+- Stop the packet capture and close Wireshark.
 
 ![image](https://github.com/user-attachments/assets/f1a955a6-a9fe-46d7-b76d-f2838ceac3e2)
 
 4. Observe SSH Traffic
+
+- Back in Wireshark, start a packet capture upand filter for SSH traffic only in the display filter.
+
+![image](https://github.com/user-attachments/assets/1071cc56-3cc4-4c88-bd53-893910dc51f9)
+
+- On your PC, go to your virtual machine menu and click on Linux VM.
+- Under Properties, you would need to obtain your Private IP address (10.0.0.5).
+
+![image](https://github.com/user-attachments/assets/e2500917-8d5b-4e6e-b255-af390637f796)
+
+- From the Windows 10 VM "SSH into" your Ubuntu VM (via its private IP address). Command will use the format ssh username@privateipaddress, for us is ssh labuser@10.0.0.5.
+- Open up Powershell on your Windows 10 VM and type "ssh labuser@10.0.0.5" and it should generate SSH traffic.
+
+![image](https://github.com/user-attachments/assets/ce4ab457-5077-44b4-98bf-7f60eaa6324b)
+
+![image](https://github.com/user-attachments/assets/45ca8207-b9b2-4129-be0f-d75103145d92)
+
+- On Powershell it will be asking if you want to continue connecting, just type "yes".
+- It will asking for a password for your Linux VM password. (e.g, Cyberlab123!)
+- When you type the paswword, nothing will appear. This is for security purposes.
+- You will then notice the promt changed to "labuser@linux-vm" meaning to your are connected to the linux machine.
+
+![image](https://github.com/user-attachments/assets/56b6f18b-5a76-456d-ae3c-09553b7c7fb0)
+
+- Furthermore you can type "id" and "hostname" and "uname -a" to prove you are connected.
+
+![image](https://github.com/user-attachments/assets/ca2d40d4-8f81-4a72-833a-c4174dbd696b)
+
+- During veryfing the connection you will notice SSH traffic generating in Wirehsark telling us the two hosts are conducting an SSH handshake and encrypted session setup.
+
+![image](https://github.com/user-attachments/assets/042cad23-d3e9-4fed-bbb7-8a6ced0bd0c2)
 
 
 5. Observe DHCP Traffic
