@@ -112,7 +112,8 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 - Under Administrator account for 'Authentication type' click 'Password'.
 - Create your Username "labuser" and password can be anything. e.g; "Cyberlab123!".
 
-![image](https://github.com/user-attachments/assets/26f80cdc-5501-45fb-906f-64594df1ec01)
+![Screenshot 2025-05-03 004155](https://github.com/user-attachments/assets/1c567476-7fb9-476f-97ee-6b0a3986416c)
+
 
 - Click 'Next : Disks' > 'Next : Networking'.
 
@@ -203,7 +204,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 ![image](https://github.com/user-attachments/assets/dc9724de-b5e0-44f6-a484-84c72a3df401)
 
 - On your pc go to Azure Virtual Machines. Click on the Linux VM.
-- Open the Networking column and go to network setting.
+- Open the Networking panel and click on network settings.
 
 ![image](https://github.com/user-attachments/assets/ddb88c3b-3503-40f1-b0f9-f1314b2f00ee)
 
@@ -211,17 +212,17 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/b6a090b6-fd93-4819-86cc-1d47689f7c86)
 
-- Open the Networking coulumn and click on 'Inbound security rules'.
+- Open the Networking coulumn and click on 'Inbound security rules' and configure the settings to block ICMP traffic
 - Click 'Add'.
-- For 'Destination port ranges' put 'asterisk'.
-- For 'Protocol put 'ICMPv4'.
-- For 'Action' just click deny.
-- Set for 'Priority' to 290.
+- 'Destination port ranges' put 'asterisk'.
+- 'Protocol put 'ICMPv4'.
+- 'Action' just click deny.
+- 'Priority' to 290.
 - Click 'Add'.
 
 ![image](https://github.com/user-attachments/assets/0f2bb2f3-110c-4f54-907a-f3af8b9f1af0)
 
-- Back on Windows VM, when inspecting Powershell you will see it will have a "request timed out" and further inspection on Wireshark you will only see "request"
+- Back on Windows VM, when inspecting Powershell you will see it will have a "request timed out" and further inspection on Wireshark you will only see "request" meaning we have successfully created a virtual firewall rule to block incoming ICMP traffic to the Linux VM.
 
 ![image](https://github.com/user-attachments/assets/45c38493-0a02-4c11-8a93-1406cccb8376)
 
@@ -231,7 +232,8 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/cd4462f2-51d9-45fe-8757-06835b4f49dc)
 
-- Back on Windows VM, observe ICMP traffic in Wireshark and Powershell.
+- Open the Linux VM in Azure and delete the block ICMP rule that we created. Click the trash can icon that is next to it to delete it.
+- Switch back to the Windows 10 virtual machine and send a ping to the Linux VM. In Wireshark, you should see ICMP request and reply packets showing that the two VMs are communicating. In PowerShell, you’ll also see successful ping responses from the Linux VM. This confirms that ICMP communication between the VMs is working again.
 - Stop the ping activity my pressing CTRL C.
 
 ![image](https://github.com/user-attachments/assets/f1a955a6-a9fe-46d7-b76d-f2838ceac3e2)
