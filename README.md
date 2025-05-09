@@ -268,16 +268,37 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/ca2d40d4-8f81-4a72-833a-c4174dbd696b)
 
-- During veryfing the connection you will notice SSH traffic generating in Wirehsark telling us the two hosts are conducting an SSH handshake and encrypted session setup.
+- As you type commands, you'll see SSH traffic appear in Wireshark, with packets generated for each individual keystroke.
+- When inspecting traffic the packets will appear encrypted because SSH establishes a secure, encrypted tunnel between the two systems.
 
 ![image](https://github.com/user-attachments/assets/042cad23-d3e9-4fed-bbb7-8a6ced0bd0c2)
 
+- You can also type 'tcp.port ==22'. 
+- Exit the SSH connection by typing ‘exit’ and pressing [Enter].
+- If you check Wireshark you will notice it dropped the connection.
+
+![image](https://github.com/user-attachments/assets/b32b3c62-7241-4075-8248-48fdcf7c5a5a)
+
+![image](https://github.com/user-attachments/assets/48f65bf5-671e-405c-b946-a0dae719dfd1)
 
 5. Observe DHCP Traffic
+
+- Back in Wireshark, start a packet capture upand filter for DHCP traffic only in the display filter.
+
+![image](https://github.com/user-attachments/assets/bf60a9d8-e49b-4df9-82c2-0cba554b0a49)
+
+- Back in powershell, type 'ipconfig /renew'
+
+![image](https://github.com/user-attachments/assets/ae50c35d-0cb0-4002-a17b-59dd994b9d06)
+
+![image](https://github.com/user-attachments/assets/2f1c0000-fd53-4b3d-8e42-1c815c21b58e)
+
 
 
 6. Observe DNS Traffic
 
 
+
 7. Observe RDP Traffic
+
 
