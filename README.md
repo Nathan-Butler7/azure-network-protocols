@@ -283,7 +283,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 5. Observe DHCP Traffic
 
-- Back in Wireshark, start a packet capture upand filter for DHCP traffic only in the display filter.
+- Back in Wireshark, start a packet capture up and filter for DHCP traffic only in the display filter.
 
 ![image](https://github.com/user-attachments/assets/bf60a9d8-e49b-4df9-82c2-0cba554b0a49)
 
@@ -324,8 +324,27 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 6. Observe DNS Traffic
 
+- Back in Wireshark, start a packet capture up and filter for DNS traffic only in the display filter.
+- You can also filter for "udp.port == 53 || tcp.port == 53"
 
+![image](https://github.com/user-attachments/assets/5a9998da-8a24-4af9-a306-22d8ae6dfd3b)
+
+- On Powershell type up "nslookup disney.com".
+- The Windows computer will reach out to the DNS and this command asks the DNS server for the IP address linked to a domain name and can also show the DNS records associated with that domain.
+
+![image](https://github.com/user-attachments/assets/cc666e8d-084c-441d-a4d7-833d89b7d2dd)
+
+- Observe the DNS traffic in Wirehsark. You can see we captured the communcation between the VM (10.0.0.4) and the DNS Server (168.63.129.16). Our VM asked the DNS server for the IP address of disney.com, after same failed responses from the DNS server (indicated by the "No such same") it eventually found the correct A record for disney.com and returned the IP 130.211.198.204 to us.
+- Finished packet capture for dns.
+
+![image](https://github.com/user-attachments/assets/83650ded-e652-4a3a-980d-1a1956e616ec)
 
 7. Observe RDP Traffic
 
+- Remote Desktop Protocol (RDP) is a network communication protocol developed by Microsoft that allows users to remotely connect to and control another computer using a graphical user interface (GUI). It transmits the screen of the remote system to the local device and sends keyboard and mouse input back to the remote machine, enabling full interaction as if the user were physically present.
+- Back in Wireshark, filter for RDP traffic only (tcp.port == 3389 || udp.port == 3389)
+- You can notice there is packets spamming that's because RDP is constantly streaming a picture from the server to your machine. 
+- Finished packet capture for RDP.
+
+![image](https://github.com/user-attachments/assets/f1d8f1d1-9469-4b7a-837f-58075f94007f)
 
