@@ -287,13 +287,40 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/bf60a9d8-e49b-4df9-82c2-0cba554b0a49)
 
-- Back in powershell, type 'ipconfig /renew'
+- Open notepad and enter the following:
+- ipconfig /release
+- ipconfig /renew
 
-![image](https://github.com/user-attachments/assets/ae50c35d-0cb0-4002-a17b-59dd994b9d06)
+![image](https://github.com/user-attachments/assets/a43c3e84-3eda-4a34-ad32-9ab9fb7982e7)
 
-![image](https://github.com/user-attachments/assets/2f1c0000-fd53-4b3d-8e42-1c815c21b58e)
+- Click on File and save as.
+- In the search bar type "c:\programdata" and press enter.
 
+![image](https://github.com/user-attachments/assets/66453a72-be76-4812-a16e-4290ac9be903)
 
+- As file type, save it as 'All Files'.
+- File name is "dhcp.bat" and click save.
+- This script will execute commands to release the VM's current IP address and request a new one from the DHCP server, generating DHCP traffic that can be observed in Wireshark.
+
+![image](https://github.com/user-attachments/assets/4bb9a7b0-32a8-4a1f-b37d-a2d4910c9104)
+
+- Open Powershell and type in "cd c:\programdata" then press enter.
+- Then type "ls", meaning list.
+- As you will observe you will notice the file "dhcp.bat is in there.
+
+![image](https://github.com/user-attachments/assets/29ea3c18-7b78-474f-ac41-696ed77cd069)
+
+- On Wireshark type "udp.port == 67 || udp.port ==68" and press enter.
+
+![image](https://github.com/user-attachments/assets/94d6778e-224c-4d7c-bf3d-a0f8a233749a)
+
+- On Powershell ype ".\dhcp.bat".
+- Open Wireshark and observe the network traffic. You should see DHCP packets corresponding to the Discover -> Offer -> Request -> Acknowledge steps exchanged between the VM (10.0.0.4) and the DHCP server (168.63.129.16). The VM initiated the release of its IP address by sending a Release packet to the DHCP server using the ipconfig /release command. Then, ipconfig /renew was run immediately afterward, which initiated the Discover -> Offer -> Request -> Acknowledge process between the VM and the DHCP server.
+- Finished packet capture for dhcp.
+
+![image](https://github.com/user-attachments/assets/00131353-3dc0-4427-8cfe-957f81cb2f9e)
+
+![image](https://github.com/user-attachments/assets/d3c52e66-e3c1-423e-bc4e-b84fea76504c)
 
 6. Observe DNS Traffic
 
