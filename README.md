@@ -56,7 +56,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
  Virtual Machines:
 - In the Azure Portal, use the search bar at the top os search for 'Virtual Machines" and select it.
 - You are desired to create two virual machines.
-- In the display area, click 'Create' > 'Azure virtual machine'.
+- In the display area, click 'Create' -> 'Azure virtual machine'.
 
 ![Screenshot 2025-05-02 225357](https://github.com/user-attachments/assets/6af18902-841e-4409-8c26-51c1576faed9)
 
@@ -73,7 +73,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 ![Screenshot 2025-05-03 004155](https://github.com/user-attachments/assets/fec762f8-fe8c-4778-bbaa-0e5362ef3f47)
 
 - Be sure to tick the box for eligibily of a windows liscence.
-- Click 'Next : Disks' > 'Next : Networking'.
+- Click 'Next : Disks' -> 'Next : Networking'.
 
 ![image](https://github.com/user-attachments/assets/abf9bcbe-64bf-4902-a8a7-bacf3eaa65b1)
 
@@ -115,7 +115,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 ![Screenshot 2025-05-03 004155](https://github.com/user-attachments/assets/1c567476-7fb9-476f-97ee-6b0a3986416c)
 
 
-- Click 'Next : Disks' > 'Next : Networking'.
+- Click 'Next : Disks' -> 'Next : Networking'.
 
 ![image](https://github.com/user-attachments/assets/ef7296c4-e998-4e9a-861c-c9da3e8d8a1d)
 
@@ -162,8 +162,8 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/45831a04-a397-4eae-b6e3-4b412b67827a)
 
-- Click 'Next' > 'Noted' > 'Next'(until you see Packet Capture, make sure to tick "Install Ncap version" during the installation process) > 'Install'.
-- On the License Agreement click 'I agree' > Install > Next > Finish.
+- Click 'Next' -> 'Noted' -> 'Next'(until you see Packet Capture, make sure to tick "Install Ncap version" during the installation process) > 'Install'.
+- On the License Agreement click 'I agree' -> Install -> Next -> Finish.
 
 ![image](https://github.com/user-attachments/assets/5af0f00e-5013-4409-b943-652a1d290545)
 
