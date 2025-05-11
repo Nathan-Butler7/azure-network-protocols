@@ -146,7 +146,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 - If using Mac, install Microsoft Remote Desktop.
 - Copy windows VM Public IP address and paste it into the Remote Desktop Connection.
 - Click 'Show Options' and put in the user name for the windows VM (labuser).
-- Click 'connect'
+- Click 'connect'.
 
 
 ![image](https://github.com/user-attachments/assets/b876d3dd-1522-4957-ba07-854e5074a469)
