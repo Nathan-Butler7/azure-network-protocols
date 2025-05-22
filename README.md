@@ -39,7 +39,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![Screenshot 2025-05-02 161517](https://github.com/user-attachments/assets/b71ae5ea-cbf2-43b0-8f7d-69a8376dbcff)
 
-- All rescources in a subsciption are billed together so leave that as default.
+- All resources in a subscription are billed together so leave that as default.
 - Resource group name can be named to your desire. I will call mine "RG-NSGs-Lab".
 - When selecting a resource group region, it's recommended that you select a location close to where your control operations originate.
 
@@ -54,8 +54,8 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 ![Screenshot 2025-05-02 223508](https://github.com/user-attachments/assets/c13dbdac-728f-496f-ae81-3db33248b357)
 
  Virtual Machines:
-- In the Azure Portal, use the search bar at the top os search for 'Virtual Machines" and select it.
-- You are desired to create two virual machines.
+- In the Azure Portal, use the search bar at the top to search for 'Virtual Machines" and select it.
+- You are required to create two virtual machines.
 - In the display area, click 'Create' -> 'Azure virtual machine'.
 
 ![Screenshot 2025-05-02 225357](https://github.com/user-attachments/assets/6af18902-841e-4409-8c26-51c1576faed9)
@@ -67,12 +67,12 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 ![Screenshot 2025-05-03 002830](https://github.com/user-attachments/assets/7a998ae6-1294-44f3-8505-ec2ea37b34e0)
 
 - For Image, select 'Windows 10 Pro version 22H2 - x64 Gen2'.
-- Recommended for 'Size' you utilise "Standard_D2s_v5 - 2 vcpus, 8 GiB memory".
+- Recommended for 'Size' you use "Standard_D2s_v5 - 2 vcpus, 8 GiB memory".
 - For 'Administrator Account' create your Username "labuser" and password can be anything. e.g; "Cyberlab123!".
 
 ![Screenshot 2025-05-03 004155](https://github.com/user-attachments/assets/fec762f8-fe8c-4778-bbaa-0e5362ef3f47)
 
-- Be sure to tick the box for eligibily of a windows liscence.
+- Be sure to tick the box for eligibility of a windows licence.
 - Click 'Next : Disks' -> 'Next : Networking'.
 
 ![image](https://github.com/user-attachments/assets/abf9bcbe-64bf-4902-a8a7-bacf3eaa65b1)
@@ -136,7 +136,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 ![Screenshot 2025-05-06 141743](https://github.com/user-attachments/assets/f4d082cc-d5a0-4180-8efe-746d9dc2177f)
 
 - You have successfully created a Linux Virtual Machine.
-- Search up "Virtual Machines" and click on it, you will see both Virtual Machines.
+- Search for "Virtual Machines" and click on it, you will see both Virtual Machines.
 
 ![image](https://github.com/user-attachments/assets/8b17d796-e31e-4570-8886-6c40d2216545)
 
@@ -184,7 +184,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/5c78e569-78e7-4ae1-9ca6-715edfd984b1)
 
-- Open up Poweshell on the Windows VM.
+- Open up PoweShell on the Windows VM.
 
 ![image](https://github.com/user-attachments/assets/bfbb7b76-6c98-4db8-ac50-bc254a27bf65)
 
@@ -192,7 +192,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/b9389d97-5d5c-4402-a16c-70ad3c0e4029)
 
-- In Powershell you can see there are four "replies" but in Wireshark window you see eight events because it captured both the request and reply from both sources (Windows and Linux). Furthermore, we know that we have successfully reached the destination over ICMP.
+- In PowerShell you can see there are four "replies" but in Wireshark window you see eight events because it captured both the request and reply from both sources (Windows and Linux). Furthermore, we know that we have successfully reached the destination over ICMP.
 
 ![image](https://github.com/user-attachments/assets/3a62665d-3921-4ea0-81a4-359a11581382)
 
@@ -241,12 +241,12 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 4. Observe SSH Traffic
 
-- Back in Wireshark, start a packet capture upand filter for SSH traffic only in the display filter.
+- Back in Wireshark, start a packet capture up and filter for SSH traffic only in the display filter.
 
 ![image](https://github.com/user-attachments/assets/1071cc56-3cc4-4c88-bd53-893910dc51f9)
 
 - On your PC, go to your virtual machine menu and click on Linux VM.
-- Under Properties, you would need to obtain your Private IP address (10.0.0.5).
+- Under Properties, obtain the Private IP address (10.0.0.5).
 
 ![image](https://github.com/user-attachments/assets/e2500917-8d5b-4e6e-b255-af390637f796)
 
@@ -293,20 +293,20 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/a43c3e84-3eda-4a34-ad32-9ab9fb7982e7)
 
-- Click on File and save as.
+- Click on File select 'Save As'.
 - In the search bar type "c:\programdata" and press enter.
 
 ![image](https://github.com/user-attachments/assets/66453a72-be76-4812-a16e-4290ac9be903)
 
 - As file type, save it as 'All Files'.
-- File name is "dhcp.bat" and click save.
+- File name is "dhcp.bat", then click Save.
 - This script will execute commands to release the VM's current IP address and request a new one from the DHCP server, generating DHCP traffic that can be observed in Wireshark.
 
 ![image](https://github.com/user-attachments/assets/4bb9a7b0-32a8-4a1f-b37d-a2d4910c9104)
 
-- Open Powershell and type in "cd c:\programdata" then press enter.
+- Open PowerShell and type in "cd c:\programdata" then press enter.
 - Then type "ls", meaning list.
-- As you will observe you will notice the file "dhcp.bat is in there.
+- You will notice the file "dhcp.bat is listed.
 
 ![image](https://github.com/user-attachments/assets/29ea3c18-7b78-474f-ac41-696ed77cd069)
 
@@ -314,8 +314,8 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 ![image](https://github.com/user-attachments/assets/94d6778e-224c-4d7c-bf3d-a0f8a233749a)
 
-- On Powershell ype ".\dhcp.bat".
-- Open Wireshark and observe the network traffic. You should see DHCP packets corresponding to the Discover -> Offer -> Request -> Acknowledge steps exchanged between the VM (10.0.0.4) and the DHCP server (168.63.129.16). The VM initiated the release of its IP address by sending a Release packet to the DHCP server using the ipconfig /release command. Then, ipconfig /renew was run immediately afterward, which initiated the Discover -> Offer -> Request -> Acknowledge process between the VM and the DHCP server.
+- On Powershell type ".\dhcp.bat".
+- Open Wireshark and observe the network traffic. You should see DHCP packets corresponding to the Discover -> Offer -> Request -> Acknowledge steps exchanged between the VM (10.0.0.4) and the DHCP server (168.63.129.16). The VM initiated the release of its IP address by sending a Release packet to the DHCP server using the ipconfig /release command. Then, ipconfig /renew is run next, which initiated the Discover -> Offer -> Request -> Acknowledge process between the VM and the DHCP server.
 - Finished packet capture for dhcp.
 
 ![image](https://github.com/user-attachments/assets/00131353-3dc0-4427-8cfe-957f81cb2f9e)
@@ -324,18 +324,19 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 6. Observe DNS Traffic
 
-- Back in Wireshark, start a packet capture up and filter for DNS traffic only in the display filter.
+- Back in Wireshark, start a packet capture and filter for DNS traffic only in the display filter.
 - You can also filter for "udp.port == 53 || tcp.port == 53"
 
 ![image](https://github.com/user-attachments/assets/5a9998da-8a24-4af9-a306-22d8ae6dfd3b)
 
 - On Powershell type up "nslookup disney.com".
-- The Windows computer will reach out to the DNS and this command asks the DNS server for the IP address linked to a domain name and can also show the DNS records associated with that domain.
+- The Windows computer will reach out to the DNS and this command asks the DNS server for the IP address linked to a domain name and may show the DNS records associated with that domain.
 
 ![image](https://github.com/user-attachments/assets/cc666e8d-084c-441d-a4d7-833d89b7d2dd)
 
-- Observe the DNS traffic in Wirehsark. You can see we captured the communcation between the VM (10.0.0.4) and the DNS Server (168.63.129.16). Our VM asked the DNS server for the IP address of disney.com, after same failed responses from the DNS server (indicated by the "No such same") it eventually found the correct A record for disney.com and returned the IP 130.211.198.204 to us.
-- Finished packet capture for dns.
+- Observe the DNS traffic in Wireshark. You can see the communication is captured between the VM (10.0.0.4) and the DNS Server (168.63.129.16).
+- Our VM asked the DNS server for the IP address of disney.com, after some initial failed responses from the DNS server (indicated by the "No such same"), it eventually found the correct A record for disney.com and returned the IP 130.211.198.204 to us.
+- Finished packet capture for DNS.
 
 ![image](https://github.com/user-attachments/assets/83650ded-e652-4a3a-980d-1a1956e616ec)
 
@@ -343,7 +344,7 @@ In this tutorial, We will be operating on Microsoft Azure and observing various 
 
 - Remote Desktop Protocol (RDP) is a network communication protocol developed by Microsoft that allows users to remotely connect to and control another computer using a graphical user interface (GUI). It transmits the screen of the remote system to the local device and sends keyboard and mouse input back to the remote machine, enabling full interaction as if the user were physically present.
 - Back in Wireshark, filter for RDP traffic only (tcp.port == 3389 || udp.port == 3389)
-- You can notice there is packets spamming that's because RDP is constantly streaming a picture from the server to your machine. 
+-  You will notice continuous packet transmission; this is because RDP is constantly streaming a picture from the server to your machine. 
 - Finished packet capture for RDP.
 
 ![image](https://github.com/user-attachments/assets/f1d8f1d1-9469-4b7a-837f-58075f94007f)
